@@ -81,4 +81,4 @@ pipeline:
                     connectorRef: account.harnessImage
                     repo: " gtbanf1979/ping"
                     tags:
-                      - <input>
+                      - <+input>
