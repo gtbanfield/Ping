@@ -23,11 +23,14 @@ There is a run step which curls the zip and then copies the docker files
 
 First you have to build the core platform
 
-Amster-BASE
+
+- [x] Java-17-BASE (from: forgeops-extras/images/java-17)
+      
+- [x] Amster-BASE
 ---
-AM-EMPTY
-AM-BASE
-AM-CDK
+- [x] AM-EMPTY
+- [x] AM-BASE
+- [x] AM-CDK
 ---
 DS-EMPTY
 
@@ -38,13 +41,13 @@ DS-EMPTY
 The images from above Base Platformbuilds are required for forgeops to build PING services.
 
 ---
-Ping/forgeops/docker/am:
+- Ping/forgeops/docker/am:
 AM (image tag taken from AM-CDK build)
 
-Ping/forgeops/docker/ds/ds-new:
+- Ping/forgeops/docker/ds/ds-new:
 DS (image tag taken from DS-EMPTY build)
 
-Ping/forgeops/docker/amster:
+- Ping/forgeops/docker/amster:
 Amster (image tag taken from Amster-BASE build)
 
 
