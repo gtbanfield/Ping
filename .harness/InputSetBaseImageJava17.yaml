@@ -27,4 +27,4 @@ inputSet:
                       tags:
                         - java-17
                       dockerfile: Dockerfile
-                      context: Harness/Ping/forgeops-extras/images/java-17
+                      context: forgeops-extras/images/java-17
