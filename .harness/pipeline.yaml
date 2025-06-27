@@ -29,6 +29,18 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: GitClone
+                  name: GitClone
+                  identifier: GitClone
+                  spec:
+                    connectorRef: account.Github
+                    repoName: Ping
+                    build:
+                      type: branch
+                      spec:
+                        branch: main
+                  description: Clone Ping Repo
+              - step:
                   type: Run
                   name: FetchBinaries
                   identifier: Run_1
@@ -41,6 +53,8 @@ pipeline:
                       curl -k https://192.168.1.83:8443/repository/adhoc/PING/Amster-7.5.1.zip -O
                       curl -k https://192.168.1.83:8443/repository/adhoc/PING/DS-7.5.2.zip -O
 
+
+                      ls -la .
 
                       #Unzip Ping Artifacts
                       unzip AM-7.5.1.zip
