@@ -26,5 +26,11 @@ inputSet:
                     spec:
                       tags:
                         - java-17
-                      dockerfile: <+input>
+                      dockerfile: Dockerfile
+                      context: forgeops-extras/images/java-17
+                - step:
+                    identifier: BuildAndPushDockerRegistry_2
+                    type: BuildAndPushDockerRegistry
+                    spec:
+                      dockerfile: Dockerfile
                       context: forgeops-extras/images/java-17
