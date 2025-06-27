@@ -49,7 +49,7 @@ pipeline:
                     image: gtbanf1979/maven:v1
                     shell: Sh
                     command: |-
-                      curl -K https://192.168.1.83:8443/repository/adhoc/PING/AM-7.5.1.zip -O
+                      curl -k https://192.168.1.83:8443/repository/adhoc/PING/AM-7.5.1.zip -O
                       curl -k https://192.168.1.83:8443/repository/adhoc/PING/Amster-7.5.1.zip -O
                       curl -k https://192.168.1.83:8443/repository/adhoc/PING/DS-7.5.2.zip -O
 
