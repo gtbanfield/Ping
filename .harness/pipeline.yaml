@@ -52,12 +52,12 @@ pipeline:
 
                       #Copy Dockerfile
 
-                      cp Ping/docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
-                      cp Ping/docker/7.5/Amster-Base/Dockerfile /harness/amster/samples/docker/
+                      cp docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
+                      cp docker/7.5/Amster-Base/Dockerfile /harness/amster/samples/docker/
 
-                      cp Ping/docker/7.5/AM/AM-EMPTY/Dockerfile /harness/openam/samples/docker/images/am-empty/
-                      cp Ping/docker/7.5/AM/AM-BASE/Dockerfile /harness/openam/samples/docker/images/am-base/
-                      cp Ping/docker/7.5/AM/AM-CDK/Dockerfile /harness/openam/samples/docker/images/am-cdk/
+                      cp docker/7.5/AM/AM-EMPTY/Dockerfile /harness/openam/samples/docker/images/am-empty/
+                      cp docker/7.5/AM/AM-BASE/Dockerfile /harness/openam/samples/docker/images/am-base/
+                      cp docker/7.5/AM/AM-CDK/Dockerfile /harness/openam/samples/docker/images/am-cdk/
                     resources:
                       limits:
                         memory: 3Gi
