@@ -48,11 +48,6 @@ COPY --chown=forgerock:root log4j.properties "$AM_HOME"/config/auth/ace/data/
 COPY --chown=forgerock:root rsa_api.properties "$AM_HOME"/config/auth/ace/data/
 
 WORKDIR "$AM_HOME"
-RUN git config --global user.email "ci@forgerock.com" && \
-    git config --global user.name "ForgeRock" && \
-    git init && \
-    git add . && \
-    git commit --quiet -m "Base configuration"
 
 RUN rm "$CATALINA_HOME"/webapps/am/WEB-INF/lib/click-extras-*.jar
 RUN rm "$CATALINA_HOME"/webapps/am/WEB-INF/lib/click-nodeps-*.jar

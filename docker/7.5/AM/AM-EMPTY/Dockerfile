@@ -83,8 +83,8 @@ RUN chmod -R g+wx $AM_HOME
 
 RUN rm -rf "$CATALINA_HOME"/webapps/*
 
-COPY --from=base --chown=forgerock:root /opt/cprof /opt/cprof
-COPY --from=base --chown=forgerock:root /opt/async-profiler /opt/async-profiler
+#COPY --from=base --chown=forgerock:root /opt/cprof /opt/cprof
+#COPY --from=base --chown=forgerock:root /opt/async-profiler /opt/async-profiler
 COPY --from=base --chown=forgerock:root "$CATALINA_HOME"/webapps/am "$CATALINA_HOME"/webapps/am
 
 COPY --chown=forgerock:root tomcat/*.xml "$CATALINA_HOME"/conf/
