@@ -64,6 +64,7 @@ pipeline:
                     repo: 192.168.1.83:5000/repository/ping
                     tags: <+input>
                     dockerfile: <+input>
+                    context: <+input>
                     buildArgs:
                       APP_NAME: <+pipeline.name>
                     resources:
