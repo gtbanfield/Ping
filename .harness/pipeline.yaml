@@ -71,8 +71,8 @@ pipeline:
                       cp Ping/docker/7.5/AM/AM-CDK/Dockerfile /harness/openam/samples/docker/images/am-cdk/
                     resources:
                       limits:
-                        memory: 2Gi
-                        cpu: 1
+                        memory: 3Gi
+                        cpu: 2
               - step:
                   type: BuildAndPushDockerRegistry
                   name: Nexus
@@ -98,7 +98,7 @@ pipeline:
                   spec:
                     resources:
                       limits:
-                        memory: 2Gi
+                        memory: 3Gi
                         cpu: 1                  
                     connectorRef: account.harnessImage
                     repo: " gtbanf1979/ping"
