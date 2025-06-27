@@ -1,2 +1,51 @@
 # generic-repo-template
-My awesome codebase
+Ping Setup
+### Ping 7.5 IDA Setup
+```
+All artifacts are in Nexus
+/PING/Amster-7.5.1.zip
+/PING/DS-7.5.2.zip
+/PING/AM-7.5.1.zip
+
+Folder Structures are as follows for the zip in Nexus.
+amster
+openam
+opendj
+
+
+All the setup's have been run and repackaged up as Zips and uploaded to Nexus.
+opendj all folder and binararies need to be copied to samples/docker/ from the opendj root folder.
+```
+
+### Base Platform
+```
+There is a run step which curls the zip and then copies the docker files
+
+First you have to build the core platform
+
+Amster-BASE
+---
+AM-EMPTY
+AM-BASE
+AM-CDK
+---
+DS-EMPTY
+
+```
+
+### ForgeOps
+```
+The images from above Base Platformbuilds are required for forgeops to build PING services.
+
+---
+Ping/forgeops/docker/am:
+AM (image tag taken from AM-CDK build)
+
+Ping/forgeops/docker/ds/ds-new:
+DS (image tag taken from DS-EMPTY build)
+
+Ping/forgeops/docker/amster:
+Amster (image tag taken from Amster-BASE build)
+
+
+```
