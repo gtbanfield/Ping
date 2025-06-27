@@ -26,5 +26,5 @@ inputSet:
                     spec:
                       tags:
                         - java-17
-                      dockerfile: Dockerfile
+                      dockerfile: <+input>
                       context: forgeops-extras/images/java-17
