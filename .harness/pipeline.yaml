@@ -84,13 +84,15 @@ pipeline:
                   name: BuildAndPushDockerRegistry_2
                   identifier: BuildAndPushDockerRegistry_2
                   spec:
+                    connectorRef: account.harnessImage
+                    repo: " gtbanf1979/ping"
+                    tags:
+                      - <input>
+                    dockerfile: <+input>
+                    context: <+input>
                     resources:
                       limits:
                         memory: 3Gi
                         cpu: 1
-                    connectorRef: account.harnessImage
-                    repo: " gtbanf1979/ping"
-                    tags:
-                      - <+input>
   delegateSelectors:
     - kubernetes-delegate-account
