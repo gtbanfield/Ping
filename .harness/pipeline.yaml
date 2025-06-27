@@ -96,6 +96,10 @@ pipeline:
                   name: BuildAndPushDockerRegistry_2
                   identifier: BuildAndPushDockerRegistry_2
                   spec:
+                    resources:
+                      limits:
+                        memory: 2Gi
+                        cpu: 1                  
                     connectorRef: account.harnessImage
                     repo: " gtbanf1979/ping"
                     tags:
