@@ -69,6 +69,10 @@ pipeline:
                       cp Ping/docker/7.5/AM/AM-EMPTY/Dockerfile /harness/openam/samples/docker/images/am-empty/
                       cp Ping/docker/7.5/AM/AM-BASE/Dockerfile /harness/openam/samples/docker/images/am-base/
                       cp Ping/docker/7.5/AM/AM-CDK/Dockerfile /harness/openam/samples/docker/images/am-cdk/
+                    resources:
+                      limits:
+                        memory: 2Gi
+                        cpu: 1
               - step:
                   type: BuildAndPushDockerRegistry
                   name: Nexus
