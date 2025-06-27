@@ -27,7 +27,29 @@ pipeline:
               nodeSelector: {}
               os: Linux
           execution:
-            steps:                  
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: gtbanf1979/maven:v1
+                    shell: Sh
+                    command: |-
+                      curl -K https://nexus:8443/repository/adhoc/PING/AM-7.5.1.zip -O
+                      curl -k https://nexus:8443/repository/adhoc/PING/Amster-7.5.1.zip -O
+                      curl -k https://nexus:8443/repository/adhoc/PING/DS-7.5.2.zip -O
+
+
+                      #Unzip Ping Artifacts
+                      unzip AM-7.5.1.zip
+                      unzip Amster-7.5.1.zip
+                      unzip DS-7.5.2.zip
+
+                      #Copy Dockerfile
+
+                      cp Ping/
               - step:
                   type: BuildAndPushDockerRegistry
                   name: Nexus
@@ -40,7 +62,7 @@ pipeline:
                     buildArgs:
                       APP_NAME: <+pipeline.name>
                     envVariables:
-                      PLUGIN_SKIP_TLS_VERIFY: "true"                     
+                      PLUGIN_SKIP_TLS_VERIFY: "true"
                     resources:
                       limits:
                         memory: 2Gi
