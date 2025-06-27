@@ -53,8 +53,9 @@ pipeline:
                       curl -k https://192.168.1.83:8443/repository/adhoc/PING/Amster-7.5.1.zip -O
                       curl -k https://192.168.1.83:8443/repository/adhoc/PING/DS-7.5.2.zip -O
 
-
+                      pwd
                       ls -la .
+                      ls -la Ping/forgeops-extras/images/java-17
 
                       #Unzip Ping Artifacts
                       unzip -q AM-7.5.1.zip
