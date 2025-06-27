@@ -56,4 +56,10 @@ Amster (image tag taken from Amster-BASE build)
 ### Harness
 ```
 Each build is handled via input sets
+The contextpath point to the each Zips Dockerfile where harness is copying them to:
+- opendj/samples/docker/
+- amster/samples/docker/
+- openam/samples/docker/images/am-empty/
+- openam/samples/docker/images/am-base/
+- openam/samples/docker/images/am-cdk/
 ```
