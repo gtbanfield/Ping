@@ -14,7 +14,7 @@ opendj
 
 
 All the setup's have been run and repackaged up as Zips and uploaded to Nexus.
-opendj all folder and binararies need to be copied to samples/docker/ from the opendj root folder.
+- [x] For opendj all folder and binararies needed to be copied to samples/docker/ from the opendj root folder.
 ```
 
 ### Base Platform
