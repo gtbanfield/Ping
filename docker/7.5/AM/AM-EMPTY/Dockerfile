@@ -20,14 +20,14 @@ RUN apt-get update -y && \
     apt-get install -y binutils wget unzip
 
 # This installs the GCP stack driver profiler.
-RUN mkdir -p /opt/cprof && \
-     wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
-     | tar xzv -C /opt/cprof
+#RUN mkdir -p /opt/cprof && \
+#     wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
+#     | tar xzv -C /opt/cprof
 
 # Installs the async-profiler
-RUN mkdir -p /opt/async-profiler && \
-    wget -q -O-  https://github.com/jvm-profiling-tools/async-profiler/releases/download/v1.5/async-profiler-1.5-linux-x64.tar.gz \
-    | tar xzv -C /opt/async-profiler
+#RUN mkdir -p /opt/async-profiler && \
+#    wget -q -O-  https://github.com/jvm-profiling-tools/async-profiler/releases/download/v1.5/async-profiler-1.5-linux-x64.tar.gz \
+#    | tar xzv -C /opt/async-profiler
 
 ADD /build/openam.war "$CATALINA_HOME"/webapps/
 RUN unzip -q "$CATALINA_HOME"/webapps/openam.war -d "$CATALINA_HOME"/webapps/am && \
