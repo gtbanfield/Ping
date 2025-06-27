@@ -43,7 +43,6 @@ pipeline:
 
                       pwd
                       ls -la .
-                      ls -la Ping/forgeops-extras/images/java-17
 
                       #Unzip Ping Artifacts
                       unzip -q AM-7.5.1.zip
