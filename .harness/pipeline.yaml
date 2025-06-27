@@ -29,18 +29,6 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: GitClone
-                  name: GitClone
-                  identifier: GitClone
-                  spec:
-                    connectorRef: account.Github
-                    repoName: Ping
-                    build:
-                      type: branch
-                      spec:
-                        branch: main
-                  description: Clone Ping Repo
-              - step:
                   type: Run
                   name: FetchBinaries
                   identifier: Run_1
