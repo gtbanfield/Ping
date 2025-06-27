@@ -1,13 +1,18 @@
 inputSet:
+  name: Base-Image-Java17
+  tags: {}
+  identifier: BaseImageJava17
+  orgIdentifier: default
+  projectIdentifier: IDA
   pipeline:
     identifier: Ping
     properties:
       ci:
         codebase:
           build:
+            type: branch
             spec:
               branch: main
-            type: branch
     stages:
       - stage:
           identifier: CI
@@ -19,11 +24,7 @@ inputSet:
                     identifier: BuildAndPushDockerRegistry_1
                     type: BuildAndPushDockerRegistry
                     spec:
-                      dockerfile: Dockerfile
-                      context: forgeops-extras/images/java-17
                       tags:
                         - java-17
-  name: Base-Image-Java17
-  identifier: BaseImageJava17
-  orgIdentifier: default
-  projectIdentifier: IDA
+                      dockerfile: Dockerfile
+                      context: Ping/forgeops-extras/images/java-17
