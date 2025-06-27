@@ -99,8 +99,10 @@ pipeline:
                     resources:
                       limits:
                         memory: 3Gi
-                        cpu: 1                  
+                        cpu: 1
                     connectorRef: account.harnessImage
                     repo: " gtbanf1979/ping"
                     tags:
                       - <+input>
+  delegateSelectors:
+    - kubernetes-delegate-account
