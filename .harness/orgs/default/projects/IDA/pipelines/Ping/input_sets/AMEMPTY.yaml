@@ -1,5 +1,6 @@
 inputSet:
   name: AM-EMPTY
+  tags: {}
   identifier: AMEMPTY
   orgIdentifier: default
   projectIdentifier: IDA
@@ -25,6 +26,7 @@ inputSet:
                       templateInputs:
                         type: BuildAndPushDockerRegistry
                         spec:
-                          tags: <+input>
+                          tags:
+                            - am-empty
                           dockerfile: docker/7.5/AM/AM-EMPTY/Dockerfile
                           context: openam/samples/docker/images/am-empty
