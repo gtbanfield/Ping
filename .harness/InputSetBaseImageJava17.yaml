@@ -24,5 +24,5 @@ inputSet:
                     identifier: BuildAndPushDockerRegistry_2
                     type: BuildAndPushDockerRegistry
                     spec:
-                      dockerfile: images/java-17/Dockerfile
+                      dockerfile: forgeops-extras/images/java-17/Dockerfile
                       context: <+input>
