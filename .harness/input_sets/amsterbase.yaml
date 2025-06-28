@@ -1,0 +1,31 @@
+inputSet:
+  pipeline:
+    identifier: Ping
+    properties:
+      ci:
+        codebase:
+          build:
+            spec:
+              branch: main
+            type: branch
+    stages:
+      - stage:
+          identifier: CI
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Nexus
+                    template:
+                      templateInputs:
+                        type: BuildAndPushDockerRegistry
+                        spec:
+                          dockerfile: amster/samples/docker/Dockerfile
+                          context: amster/samples/docker/
+                          tags:
+                            - amster-base
+  name: amster-base
+  identifier: amsterbase
+  orgIdentifier: default
+  projectIdentifier: IDA
