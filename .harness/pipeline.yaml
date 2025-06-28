@@ -78,19 +78,5 @@ pipeline:
                         tags: <+input>
                         dockerfile: <+input>
                         context: <+input>
-              - step:
-                  type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_2
-                  identifier: BuildAndPushDockerRegistry_2
-                  spec:
-                    connectorRef: account.gtbanf1979Dockerhub
-                    repo: " gtbanf1979/ping"
-                    tags: <+input>
-                    dockerfile: <+input>
-                    context: <+input>
-                    resources:
-                      limits:
-                        memory: 3Gi
-                        cpu: 1
   delegateSelectors:
     - kubernetes-delegate-account
