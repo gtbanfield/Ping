@@ -68,3 +68,4 @@ The contextpath point to the each Zips Dockerfile where harness is copying them 
 docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
 
 gtbanf1979/ping/java-17-base
+
