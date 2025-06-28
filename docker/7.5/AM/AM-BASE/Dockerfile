@@ -17,7 +17,7 @@
 # Build arg required for customer builds
 ARG docker_tag=latest
 
-FROM ${docker.push.repo}/am-empty:${docker_tag}
+FROM 192.168.1.83:5000/repository/ping:am-empty
 
 USER 0
 RUN apt-get update -y && \

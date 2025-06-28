@@ -15,7 +15,7 @@
 #
 ARG docker_tag=latest
 
-FROM ${docker.push.repo}/am-base/${docker.promotion.folder}:${docker.tag}
+FROM 192.168.1.83:5000/repository/ping:am-base
 USER root
 
 ENV DEBIAN_FRONTEND=noninteractive
