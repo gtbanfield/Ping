@@ -1,13 +1,18 @@
 inputSet:
+  name: DS-EMPTY
+  tags: {}
+  identifier: DSEMPTY
+  orgIdentifier: default
+  projectIdentifier: IDA
   pipeline:
     identifier: Ping
     properties:
       ci:
         codebase:
           build:
+            type: branch
             spec:
               branch: main
-            type: branch
     stages:
       - stage:
           identifier: CI
@@ -16,14 +21,12 @@ inputSet:
             execution:
               steps:
                 - step:
-                    identifier: BuildAndPushDockerRegistry_2
-                    type: BuildAndPushDockerRegistry
-                    spec:
-                      dockerfile: docker/7.5/DS-Empty/Dockerfile
-                      context: opendj
-                      tags:
-                        - amster-base
-  name: DS-EMPTY
-  identifier: DSEMPTY
-  orgIdentifier: default
-  projectIdentifier: IDA
+                    identifier: Nexus
+                    template:
+                      templateInputs:
+                        type: BuildAndPushDockerRegistry
+                        spec:
+                          tags:
+                            - ds-empty
+                          dockerfile: docker/7.5/DS-Empty/Dockerfile
+                          context: opendj
