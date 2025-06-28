@@ -1,4 +1,4 @@
-FROM gcr.io/forgerock-io/ds-empty:7.5.0
+FROM 192.168.1.83:5000/repository/ping:ds-empty
 
 # FOR DEBUG. Remove for production deployment
 USER root

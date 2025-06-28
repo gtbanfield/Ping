@@ -1,4 +1,4 @@
-FROM gcr.io/forgerock-io/amster:7.5.0
+FROM 192.168.1.83:5000/repository/ping:amster-base
 
 USER root
 

@@ -69,3 +69,12 @@ docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
 
 gtbanf1979/ping/java-17-base
 
+{
+  "insecure-registries":
+    ["192.168.1.83:5000"]
+}
+
+192.168.1.83:5000/repository/ping:java-17-base
+192.168.1.83:5000/repository/ping:ds-empty
+192.168.1.83:5000/repository/ping:java-17-base
+192.168.1.83:5000/repository/ping:amster-base
