@@ -1,0 +1,31 @@
+inputSet:
+  name: am-cdk
+  identifier: amcdk
+  orgIdentifier: default
+  projectIdentifier: IDA
+  pipeline:
+    identifier: Ping
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: main
+    stages:
+      - stage:
+          identifier: CI
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Nexus
+                    template:
+                      templateInputs:
+                        type: BuildAndPushDockerRegistry
+                        spec:
+                          tags:
+                            - am-cdk
+                          dockerfile: docker/7.5/AM/AM-CDK/Dockerfile
+                          context: openam/samples/docker/images/am-cdk
