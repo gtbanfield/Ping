@@ -1,0 +1,29 @@
+inputSet:
+  pipeline:
+    identifier: Ping
+    properties:
+      ci:
+        codebase:
+          build:
+            spec:
+              branch: main
+            type: branch
+    stages:
+      - stage:
+          identifier: CI
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: BuildAndPushDockerRegistry_2
+                    type: BuildAndPushDockerRegistry
+                    spec:
+                      dockerfile: docker/7.5/DS-Empty/Dockerfile
+                      context: opendj
+                      tags:
+                        - amster-base
+  name: DS-EMPTY
+  identifier: DSEMPTY
+  orgIdentifier: default
+  projectIdentifier: IDA
