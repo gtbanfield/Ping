@@ -63,3 +63,8 @@ The contextpath point to the each Zips Dockerfile where harness is copying them 
 - openam/samples/docker/images/am-base/
 - openam/samples/docker/images/am-cdk/
 ```
+
+
+docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
+
+gtbanf1979/ping/java-17-base

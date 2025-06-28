@@ -13,7 +13,7 @@
 #
 # Copyright 2020-2023 ForgeRock AS.
 #
-FROM gcr.io/forgerock-io/java-17:latest
+FROM gtbanf1979/ping/java-17-base
 
 ENV FORGEROCK_HOME /home/forgerock
 
