@@ -75,10 +75,6 @@ pipeline:
                     templateInputs:
                       type: BuildAndPushDockerRegistry
                       spec:
-                        resources:
-                          limits:
-                            memory: 8Gi
-                            cpu: 2
                         tags: <+input>
                         dockerfile: <+input>
                         context: <+input>
