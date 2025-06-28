@@ -26,13 +26,13 @@ First you have to build the core platform
 
 - [x] Java-17-BASE (from: forgeops-extras/images/java-17)
       
-- [x] Amster-BASE
+- [x] Amster-BASE (image from Java-17-BASE)
 ---
-- [x] AM-EMPTY
+- [x] AM-EMPTY 
 - [x] AM-BASE
 - [x] AM-CDK
 ---
-DS-EMPTY
+DS-EMPTY (image from Java-17-BASE)
 
 ```
 
