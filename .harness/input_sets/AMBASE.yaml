@@ -1,0 +1,31 @@
+inputSet:
+  name: AM-BASE
+  identifier: AMBASE
+  orgIdentifier: default
+  projectIdentifier: IDA
+  pipeline:
+    identifier: Ping
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: main
+    stages:
+      - stage:
+          identifier: CI
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: Nexus
+                    template:
+                      templateInputs:
+                        type: BuildAndPushDockerRegistry
+                        spec:
+                          dockerfile: docker/7.5/AM/AM-BASE/Dockerfile
+                          context: openam/samples/docker/images/am-base
+                          tags:
+                            - am-base
