@@ -51,9 +51,13 @@ pipeline:
 
                       #Copy Dockerfile
 
-                      cp docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
+                      #DS-Empty
+                      #cp docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
+
+                      #Amster-Base
                       cp docker/7.5/Amster-Base/Dockerfile /harness/amster/samples/docker/
 
+                      #AM
                       cp docker/7.5/AM/AM-EMPTY/Dockerfile /harness/openam/samples/docker/images/am-empty/
                       cp docker/7.5/AM/AM-BASE/Dockerfile /harness/openam/samples/docker/images/am-base/
                       cp docker/7.5/AM/AM-CDK/Dockerfile /harness/openam/samples/docker/images/am-cdk/
