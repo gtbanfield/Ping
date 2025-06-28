@@ -13,7 +13,7 @@
 #
 # Copyright 2020-2023 ForgeRock AS.
 #
-FROM gtbanf1979/ping/java-17-base
+FROM 192.168.1.83:5000/repository/ping:java-17-base
 
 # NOTE: Fabric8 Docker Maven plugin doesn't support heredocs or run mounts.
 
