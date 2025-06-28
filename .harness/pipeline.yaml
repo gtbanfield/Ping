@@ -66,6 +66,17 @@ pipeline:
                         memory: 3Gi
                         cpu: 2
               - step:
+                  name: Nexus
+                  identifier: Nexus
+                  template:
+                    templateRef: Nexus
+                    versionLabel: v0.1.0
+                    gitBranch: main
+                    templateInputs:
+                      type: BuildAndPushDockerRegistry
+                      spec:
+                        tags: <+input>
+              - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_2
                   identifier: BuildAndPushDockerRegistry_2
