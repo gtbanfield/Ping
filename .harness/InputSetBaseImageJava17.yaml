@@ -21,9 +21,20 @@ inputSet:
             execution:
               steps:
                 - step:
+                    identifier: Nexus
+                    template:
+                      templateInputs:
+                        type: BuildAndPushDockerRegistry
+                        spec:
+                          tags:
+                            - java-17-base
+                          dockerfile: forgeops-extras/images/java-17/Dockerfile
+                          context: forgeops-extras/images/java-17
+                - step:
                     identifier: BuildAndPushDockerRegistry_2
                     type: BuildAndPushDockerRegistry
                     spec:
-                      tags: <+input>
+                      tags:
+                        - java-17-base
                       dockerfile: forgeops-extras/images/java-17/Dockerfile
                       context: forgeops-extras/images/java-17
