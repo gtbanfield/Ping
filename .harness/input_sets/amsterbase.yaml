@@ -1,13 +1,18 @@
 inputSet:
+  name: amster-base
+  tags: {}
+  identifier: amsterbase
+  orgIdentifier: default
+  projectIdentifier: IDA
   pipeline:
     identifier: Ping
     properties:
       ci:
         codebase:
           build:
+            type: branch
             spec:
               branch: main
-            type: branch
     stages:
       - stage:
           identifier: CI
@@ -21,11 +26,7 @@ inputSet:
                       templateInputs:
                         type: BuildAndPushDockerRegistry
                         spec:
-                          dockerfile: amster/samples/docker/Dockerfile
-                          context: amster/samples/docker/
                           tags:
                             - amster-base
-  name: amster-base
-  identifier: amsterbase
-  orgIdentifier: default
-  projectIdentifier: IDA
+                          dockerfile: docker/7.5/Amster-Base/Dockerfile
+                          context: amster/samples/docker
