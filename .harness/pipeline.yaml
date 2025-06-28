@@ -63,7 +63,7 @@ pipeline:
                       cp docker/7.5/AM/AM-CDK/Dockerfile /harness/openam/samples/docker/images/am-cdk/
                     resources:
                       limits:
-                        memory: 3Gi
+                        memory: 8Gi
                         cpu: 2
               - step:
                   name: Nexus
