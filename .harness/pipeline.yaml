@@ -55,7 +55,7 @@ pipeline:
                       #cp docker/7.5/DS-Empty/Dockerfile /harness/opendj/samples/docker/
 
                       #Amster-Base
-                      cp docker/7.5/Amster-Base/Dockerfile /harness/amster/samples/docker/
+                      #cp docker/7.5/Amster-Base/Dockerfile /harness/amster/samples/docker/
 
                       #AM
                       cp docker/7.5/AM/AM-EMPTY/Dockerfile /harness/openam/samples/docker/images/am-empty/
