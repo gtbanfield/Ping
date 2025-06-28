@@ -68,8 +68,7 @@ pipeline:
                   spec:
                     connectorRef: account.harnessImage
                     repo: " gtbanf1979/ping"
-                    tags:
-                      - <input>
+                    tags: <+input>
                     dockerfile: <+input>
                     context: <+input>
                     resources:
