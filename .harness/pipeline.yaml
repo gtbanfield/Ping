@@ -76,6 +76,7 @@ pipeline:
                       type: BuildAndPushDockerRegistry
                       spec:
                         tags: <+input>
+                        context: <+input>
               - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_2
