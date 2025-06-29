@@ -74,8 +74,14 @@ gtbanf1979/ping/java-17-base
     ["192.168.1.83:5000"]
 }
 
-192.168.1.83:5000/repository/ping:java-17-base
-192.168.1.83:5000/repository/ping:ds-empty
-192.168.1.83:5000/repository/ping:java-17-base
-192.168.1.83:5000/repository/ping:amster-base
-192.168.1.83:5000/repository/ping:am-empty
+docker build -t 192.168.1.83:5000/repository/ping:java-17-base .
+docker build -t 192.168.1.83:5000/repository/ping:ds-empty .
+docker build -t 192.168.1.83:5000/repository/ping:java-17-base
+docker build -t 192.168.1.83:5000/repository/ping:amster-base .
+docker build -t 192.168.1.83:5000/repository/ping:am-empty .
+docker build -t 192.168.1.83:5000/repository/ping:am-base .
+docker build -t 192.168.1.83:5000/repository/ping:am-cdk .
+
+docker build -t 192.168.1.83:5000/repository/ping:amster .
+docker build -t 192.168.1.83:5000/repository/ping:am .
+docker build -t 192.168.1.83:5000/repository/ping:ds
