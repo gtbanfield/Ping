@@ -85,3 +85,7 @@ docker build -t 192.168.1.83:5000/repository/ping:am-cdk .
 docker build -t 192.168.1.83:5000/repository/ping:amster .
 docker build -t 192.168.1.83:5000/repository/ping:am .
 docker build -t 192.168.1.83:5000/repository/ping:ds .
+
+docker push 192.168.1.83:5000/repository/ping:amster
+docker push 192.168.1.83:5000/repository/ping:am
+docker push 192.168.1.83:5000/repository/ping:ds
