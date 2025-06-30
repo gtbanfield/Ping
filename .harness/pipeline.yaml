@@ -113,6 +113,7 @@ pipeline:
               - serviceRef: DSService
               - serviceRef: AMService
                 gitBranch: main
+              - serviceRef: AmsterService
             metadata:
               parallel: false
         tags: {}
