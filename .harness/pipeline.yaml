@@ -3,7 +3,8 @@ pipeline:
   identifier: Ping
   projectIdentifier: IDA
   orgIdentifier: default
-  tags: {}
+  tags:
+    ai_generated: "true"
   properties:
     ci:
       codebase:
@@ -110,10 +111,7 @@ pipeline:
                     pruningEnabled: false
           services:
             values:
-              - serviceRef: DSService
-              - serviceRef: AMService
-                gitBranch: main
-              - serviceRef: AmsterService
+              - serviceRef: <+input>
             metadata:
               parallel: false
         tags: {}
@@ -123,5 +121,4 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
-  delegateSelectors:
-    - kubernetes-delegate-account
+  description: This pipeline was updated by Harness AI on 2025-06-30 20:27:32 UTC by Grant.
