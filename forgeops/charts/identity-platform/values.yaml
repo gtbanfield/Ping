@@ -773,8 +773,8 @@ ds_cts:
   replicaCount: 1
 
   image:
-    repository: us-docker.pkg.dev/forgeops-public/images/ds
-    tag: "7.5.0"
+    repository: docker push 192.168.1.83:5000/repository/ping
+    tag: "ds"
     pullPolicy: IfNotPresent
     imagePullSecrets: []
 
