@@ -1,0 +1,26 @@
+service:
+  name: AM-Service
+  identifier: AMService
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: AM
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.Github
+                  gitFetchType: Branch
+                  paths:
+                    - /helm-charts-ping
+                    - "- manifests/AM/values.yaml"
+                  repoName: helm-chart-harness
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: IDA
