@@ -1,0 +1,5 @@
+service:
+  name: DS-Service
+  identifier: DSService
+  orgIdentifier: default
+  projectIdentifier: IDA
