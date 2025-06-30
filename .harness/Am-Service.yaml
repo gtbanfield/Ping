@@ -1,0 +1,26 @@
+service:
+  name: Amster-Service
+  identifier: AmsterService
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: AmsterService
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.Github
+                  gitFetchType: Branch
+                  paths:
+                    - helm-charts-ping
+                    - "- manifests/Amster/values.yaml"
+                  repoName: helm-chart-harness
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: IDA
