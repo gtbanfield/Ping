@@ -20,7 +20,7 @@ service:
                   branch: main
               subChartPath: ""
               valuesPaths:
-                - manifests/DS/values.yaml
+                - manifests/DS/dev/values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
               helmVersion: V3
