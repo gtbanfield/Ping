@@ -14,7 +14,7 @@ service:
                 spec:
                   connectorRef: account.Github
                   gitFetchType: Branch
-                  folderPath: helm-charts-ping/Amster
+                  folderPath: helm-charts-ping/DEV/Amster
                   repoName: helm-chart-harness
                   branch: main
               subChartPath: ""
