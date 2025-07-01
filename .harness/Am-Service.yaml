@@ -1,5 +1,5 @@
 service:
-  name: Amster-Service
+  name: Amster-Service-Dev
   identifier: AmsterService
   serviceDefinition:
     type: Kubernetes
@@ -19,7 +19,7 @@ service:
                   branch: main
               subChartPath: ""
               valuesPaths:
-                - manifests/Amster/values.yaml
+                - manifests/Amster/dev/values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
   gitOpsEnabled: false
