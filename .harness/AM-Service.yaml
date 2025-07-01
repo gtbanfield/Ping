@@ -19,7 +19,7 @@ service:
                   branch: main
               subChartPath: ""
               valuesPaths:
-                - manifests/AM/values.yaml
+                - manifests/AM/dev/values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
   gitOpsEnabled: false
