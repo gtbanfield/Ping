@@ -1,5 +1,5 @@
 service:
-  name: AM-Service
+  name: AM-Service-Dev
   identifier: AMService
   serviceDefinition:
     type: Kubernetes
