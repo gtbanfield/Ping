@@ -14,11 +14,12 @@ service:
                 spec:
                   connectorRef: account.Github
                   gitFetchType: Branch
-                  paths:
-                    - helm-charts-ping
-                    - "- manifests/Amster/values.yaml"
+                  folderPath: helm-charts-ping/Amster
                   repoName: helm-chart-harness
                   branch: main
+              subChartPath: ""
+              valuesPaths:
+                - manifests/Amster/values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
   gitOpsEnabled: false
