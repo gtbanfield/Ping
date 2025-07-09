@@ -21,7 +21,7 @@ service:
               subChartPath: ""
               valuesPaths:
                 - manifests/DS/dev/values.yaml
-              skipResourceVersioning: false
+              skipResourceVersioning: true
               enableDeclarativeRollback: false
               helmVersion: V3
               fetchHelmChartMetadata: false
