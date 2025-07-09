@@ -21,7 +21,7 @@ ARG uid=11111
 ARG gid=0
 ARG source=.
 ARG target=/opt/opendj
-ARG runSetup=true
+ARG runSetup=false
 
 COPY --chown=${uid}:${gid} ${source} ${target}
 
