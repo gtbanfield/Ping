@@ -2,26 +2,27 @@ service:
   name: AM-Service-Dev
   identifier: AMService
   serviceDefinition:
-    type: Kubernetes
     spec:
       manifests:
         - manifest:
             identifier: AM
-            type: K8sManifest
+            type: HelmChart
             spec:
               store:
                 type: Github
                 spec:
                   connectorRef: account.Github
                   gitFetchType: Branch
-                  folderPath: helm-charts-ping/DEV/AM
+                  folderPath: helm-charts-ping/DEV/Am
                   repoName: helm-chart-harness
                   branch: main
               subChartPath: ""
               valuesPaths:
                 - manifests/AM/dev/values.yaml
-              skipResourceVersioning: false
+              skipResourceVersioning: true
               enableDeclarativeRollback: false
-  gitOpsEnabled: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
+    type: Kubernetes
   orgIdentifier: default
   projectIdentifier: IDA
